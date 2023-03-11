@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int pivot(int arr[],int n){
+int s=0,e=n-1,ans=-1;
+int mid=(s+e)/2;
+while(s<e){
+  if(arr[mid]>arr[0]){
+    s=mid+1;
+  }
+  else{
+    e=mid;
+  }
+    mid=(s+e)/2;
+}
+return s;
+}
+
+
+int main(){
+int arr[6]={7,9,12,0  ,7};
+cout<<pivot(arr,6)<<endl;
+
+
+}
+
